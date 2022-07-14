@@ -14,7 +14,6 @@ import router from './router'
 
 import '@/icons' // icon
 import '@/permission' // permission control
-
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
@@ -27,7 +26,10 @@ import '@/permission' // permission control
 //   const { mockXHR } = require('../mock')
 //   mockXHR()
 // }
-
+import * as obj from '@/directives'
+Object.keys(obj).forEach(key => {
+  Vue.directive(key, obj[key])
+})
 // set ElementUI lang to EN
 Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明

@@ -224,7 +224,9 @@ $light_gray: #eee;
 
   .title-container {
     position: relative;
-
+    img {
+      margin-bottom: 20px;
+    }
     .title {
       font-size: 26px;
       color: $light_gray;
